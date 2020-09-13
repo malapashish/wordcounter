@@ -5,6 +5,7 @@ body {
     animation: gradient 15s ease infinite;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 @keyframes gradient {
@@ -28,15 +29,45 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    margin-left: 60px;
 }
 
-#container > h1{
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title > button {
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin-top: 15px;
+    border-radius: 25px;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease;
+}
+
+.title > button:focus{
+    outline: none;
+}
+
+.fas{
+    font-size: 49px;
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.title > h1{
     padding: 0;
     margin: 0;
     font-size: 60px;
     margin-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
     color: #ffffff;
+    margin-left: 45px;
 }
 
 textarea{
@@ -75,19 +106,77 @@ textarea:focus{
     grid-row: 3;
 }
 
+.rotate{
+    transform: rotate(-180deg);
+}
+
+#keywords{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #ffffff;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+}
+
+
+#keywords ul {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin: 2% 0;
+}
+  
+#keywords li {
+    display: inline-block;
+    width: 44%;
+    padding: 10px;
+    margin: 1%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#social_media{
+    width: 200px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 75px;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: 830px;
+    display: none;
+}
 
 /*Responsive */
 @media only screen and (max-width : 768px){
     #container{
-        margin-top: 30px;
+        margin-top: 60px;
         width: 300px;
+        margin-left: 8px;
     } 
 
-    #container > h1{
-        font-size: 30px;
+    .title > h1{
+        font-size: 20px;
+    }
+
+    #test_btn{
+        display: none;
     }
 
     textarea{
         width: 280px;
+    }
+
+    #keywords{
+        width: 300px;
+    }
+
+    #keywords li{
+        font-size: 15px;
+    }
+
+    #social_media{
+        display: none;
     }
 }

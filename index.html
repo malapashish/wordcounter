@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Ubuntu&display=swap"
         rel="stylesheet">
@@ -14,7 +17,10 @@
 
 <body>
     <div id="container">
-        <h1>Word Counter</h1>
+        <div class="title">
+            <h1>Word Counter</h1>
+            <button onclick="rotateLogo()" id="test_btn"><i class="fas fa-arrow-circle-right"></i></button>
+        </div>
         <textarea placeholder="Enter your text here..." autofocus style="color:#ffffff" id="textarea"></textarea>
         <div id="output-row">
             <div class="output-elements">Characters: <span id="characters">0</span></div>
@@ -23,7 +29,13 @@
             <div class="output-elements">Paragraphs: <span id="paragraphs">0</span></div>
             <div class="output-elements last-element">Reading Time: <span id="readingTime">0</span></div>
         </div>
+        <div id="keywords">
+            Top Keywords :
+            <ul id="topKeywords">
+            </ul>
+        </div>
     </div>
+    <div id="social_media"></div>
     <script src="script.js"></script>
 </body>
 
