@@ -60,12 +60,6 @@ input.addEventListener('keyup', function () {
         readingTime.innerHTML = "0s";
     }
 
-    //top words keywords calculations
-    if (words) {
-        keyWords.style.display = "block";
-    } else {
-        keyWords.style.display = "none";
-    }
 
     if (words) {
         //step 1 : Remove stop words from the input
@@ -106,8 +100,15 @@ input.addEventListener('keyup', function () {
         }
     }
 
-})
+    //top words keywords calculations
+    if (words) {
+        keyWords.style.display = "block";
+    } else {
+        keyWords.style.display = "none";
+    }
 
+
+})
 
 function rotateLogo() {
     let btn = document.getElementById('test_btn');
